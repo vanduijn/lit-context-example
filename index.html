@@ -9,11 +9,15 @@
     <body>
 
         <h1>Lit context example</h1>    
+        <p>
+            This example uses Lit context to share a Logger object containg a function and data with the other consumers.
+            The consumers can access the data and call the function on the Logger Object. The consumers are updated when the Logger data is updated.
+        </p>
 
         <my-log-provider>
             <my-log-consumer></my-log-consumer>
-            <my-log-consumer></my-log-consumer>
-            <my-log-consumer-with-mixin></my-log-consumer-with-mixin>
+            <my-log-consumer-with-edit></my-log-consumer-with-edit>
+            <my-log-consumer-with-edit></my-log-consumer-with-edit>
         </my-log-provider>
 
         <script type="module" src="./script.js"></script>
