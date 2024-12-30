@@ -2,8 +2,6 @@ import {LitElement, html} from 'lit';
 import {ContextProvider} from '@lit/context';
 import {loggerContext} from './loggerContext.js';
 import {LoggerImpl} from './logger.js';
-import { loggerEventName } from './loggerEvent.js';
-
 
 
 
@@ -18,14 +16,7 @@ export class MyProvider extends LitElement {
    
     constructor() {
         super();
-        
-        this.addEventListener(loggerEventName, (e) => {
-            this.logger.log(e.detail);
-            this.provider.setValue(this.logger, true);
-            this.requestUpdate();
-        });
-        
-        this.logger = new LoggerImpl();
+        this.logger = new LoggerImpl(this.provider);
         this.provider.setValue(this.logger, true);
     }
   

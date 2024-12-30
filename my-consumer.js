@@ -1,7 +1,6 @@
 import { LitElement, html } from "lit";
 import { ContextConsumer } from "@lit/context";
 import { loggerContext } from "./loggerContext.js";
-import { createLoggerEvent } from "./loggerEvent.js";
 
 export class MyConsumer extends LitElement {
 
@@ -47,7 +46,7 @@ export class MyConsumer extends LitElement {
     
     #onClick() {
         const val = this.shadowRoot.querySelector("#loginput").value;
-        this.dispatchEvent(createLoggerEvent(val));
+        this.logger.log(val);
     }
 }
 
