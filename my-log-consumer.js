@@ -5,7 +5,7 @@ export class MyLogConsumer extends LogConsumerMixin(LitElement) {
 
     render() {
         return html`
-            <h2>Log Consumer - view only</h2>
+            <h2>Log Consumer - view</h2>
             Last received log message: <code>${this.logger?.lastMessage}</code>
         `;
     }

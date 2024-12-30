@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit";
 import { LogConsumerMixin } from "./log-consumer-mixin.js";
 
-export class MyLogConsumerWithEdit extends LogConsumerMixin(LitElement) {
+export class MyLogConsumerEdit extends LogConsumerMixin(LitElement) {
 
     constructor() {
         super();
@@ -9,7 +9,7 @@ export class MyLogConsumerWithEdit extends LogConsumerMixin(LitElement) {
 
     render() {
         return html`
-            <h2>Log Consumer - with edit</h2>
+            <h2>Log Consumer - edit</h2>
             Last received log message: <code>${this.logger?.lastMessage}</code>
             <p>
                 <label>
@@ -28,4 +28,4 @@ export class MyLogConsumerWithEdit extends LogConsumerMixin(LitElement) {
 }
 
 
-customElements.define('my-log-consumer-with-edit', MyLogConsumerWithEdit);
+customElements.define('my-log-consumer-edit', MyLogConsumerEdit);
