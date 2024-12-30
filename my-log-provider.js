@@ -5,9 +5,9 @@ import {LoggerImpl} from './logger.js';
 
 
 
-export class MyProvider extends LitElement {
+export class MyLogProvider extends LitElement {
 
-    // create a provider controller and a default logger
+    // create a context provider controller
     provider = new ContextProvider(this, {context: loggerContext}); 
 
     properties = {
@@ -17,7 +17,6 @@ export class MyProvider extends LitElement {
     constructor() {
         super();
         this.logger = new LoggerImpl(this.provider);
-        this.provider.setValue(this.logger, true);
     }
   
     render() {
@@ -29,4 +28,4 @@ export class MyProvider extends LitElement {
 
 }
 
-customElements.define('my-provider', MyProvider);
+customElements.define('my-log-provider', MyLogProvider);

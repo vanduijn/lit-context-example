@@ -2,7 +2,7 @@ import { LitElement, html } from "lit";
 import { ContextConsumer } from "@lit/context";
 import { loggerContext } from "./loggerContext.js";
 
-export class MyConsumer extends LitElement {
+export class MyLogConsumer extends LitElement {
 
     #consumer = null;
 
@@ -51,4 +51,4 @@ export class MyConsumer extends LitElement {
 }
 
 
-customElements.define('my-consumer', MyConsumer);
+customElements.define('my-log-consumer', MyLogConsumer);

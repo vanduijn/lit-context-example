@@ -1,5 +1,5 @@
 import {providerStyles} from './styles.js';
 
-import { MyProvider } from './my-provider.js';
-import { MyConsumer } from './my-consumer.js';
+import { MyLogProvider } from './my-log-provider.js';
+import { MyLogConsumer } from './my-log-consumer.js';
 
