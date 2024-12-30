@@ -29,11 +29,6 @@ export class MyLogConsumer extends LitElement {
         }); 
     }
 
-    disconnectedCallback() {
-        super.disconnectedCallback();
-        this.#consumer.disconnect();
-    }
-
     render() {
         return html`
             <h2>Consumer</h2>

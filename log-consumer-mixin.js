@@ -26,9 +26,4 @@ export const LogConsumerMixin = (superclass) => class extends superclass {
             subscribe: true
         }); 
     }
-
-    disconnectedCallback() {
-        this.#consumer.disconnect();
-        super.disconnectedCallback();
-    }
 }
